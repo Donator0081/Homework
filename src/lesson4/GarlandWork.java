@@ -52,11 +52,11 @@ public class GarlandWork {
 
     public static void firstPosition() {
         System.out.println("Введите номер лампочки для проверки первой позиции:");
-        int b1;
+        int b;
         int i = Scanner();
         int maska = 1;
-        b1 = i & maska;
-        System.out.println("Первая позиция " + b1);
+        b = i & maska;
+        System.out.println("Первая позиция " + b);
     }
 
     public static void state() {

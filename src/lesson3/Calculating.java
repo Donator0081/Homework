@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 public class Calculating {
     public static void main(String[] args) {
+        int s1 = Scanner();
+        int s2 = Scanner();
+        System.out.println(s1 + s2);
+    }
+
+    public static int Scanner() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите целые числа");
+        System.out.println("Введите целое число");
         if (sc.hasNextInt()) {
-            int i1 = sc.nextInt();
-            if (sc.hasNextInt()) {
-                int i2 = sc.nextInt();
-                System.out.println(i1 + i2);
-            }
+            return sc.nextInt();
         } else {
             System.out.println("Вы некорректно ввели число");
+            return 0;
         }
     }
 }
