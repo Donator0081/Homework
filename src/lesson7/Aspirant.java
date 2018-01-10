@@ -19,10 +19,18 @@ public class Aspirant extends Student {
         this.scienceWork = scienceWork;
     }
 
+    public double getScholarship(){
+        if (averageMark==5){
+            return 200;
+        }
+        return 180;
+    }
+
     public static void main(String[] args) {
         Student student = new Student("Илья","Иванов","BA",5);
         Aspirant aspirant1 = new Aspirant("Илья1","Иванов1","BA1",4,"Научная работа Ф");
         Student aspirant2 = new Aspirant("Илья2","Иванов2","BA2",3,"Научная работа Ф");
+        Student[] students = {student, aspirant1,aspirant2};
         System.out.println(aspirant1.getFirstName());
         System.out.println(aspirant1.getLastName());
         System.out.println(aspirant1.getGroup());
@@ -34,5 +42,8 @@ public class Aspirant extends Student {
         System.out.println(aspirant2.getGroup());
         System.out.println(aspirant2.getAverageMark());
         //System.out.println(aspirant2.getScienceWork());
+            for (Student student1 : students){
+                System.out.println(student1.getScholarship());
+            }
     }
 }

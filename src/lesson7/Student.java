@@ -45,4 +45,10 @@ public class Student {
     public void setAverageMark(double averageMark) {
         this.averageMark = averageMark;
     }
+    public double getScholarship(){
+        if (averageMark==5){
+            return 100;
+        }
+        return 80;
+    }
 }
