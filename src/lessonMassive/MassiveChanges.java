@@ -8,17 +8,17 @@ public class MassiveChanges {
         int i, j, tmp;
         boolean b1 = true;
         for (i = 0; i < numbers.length; i++) {
-            for (j = numbers.length - 1; j > i; j--) {
-                if (numbers[j - 1] < numbers[j]) {
-                    tmp = numbers[j - 1];
-                    numbers[j - 1] = numbers[j];
+            for (j = 0; j < numbers.length - 1 - i; j++) {
+                if (numbers[j + 1] > numbers[j]) {
+                    tmp = numbers[j + 1];
+                    numbers[j + 1] = numbers[j];
                     numbers[j] = tmp;
                     b1 = false;
                 }
                 System.out.println(Arrays.toString(numbers));
-                if (!b1) {
-                    break;
-                }
+            }
+            if (!b1) {
+                break;
             }
         }
     }

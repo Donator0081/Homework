@@ -14,9 +14,7 @@ public class ArgumentsDays {
                 day = "четверг";
             } else if ("5".equals(str)) {
                 day = "пятница";
-            } else if ("6".equals(str)) {
-                day = "выходной";
-            } else if ("7".equals(str)) {
+            } else if ("6".equals(str) || "7".equals(str)) {
                 day = "выходной";
             }
             System.out.println("Сегодня " + day);

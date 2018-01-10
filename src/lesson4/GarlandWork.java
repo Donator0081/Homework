@@ -40,13 +40,11 @@ public class GarlandWork {
 
     public static void runString(Scanner sc) {
         System.out.println("Введите номер лампочки,которая должна убежать:");
-        int i = 0;
         int b = goScan(sc);
         System.out.println("Введите количество шагов для побега");
         int c = goScan(sc);
         for (int d = 0; c > d; d++) {
             b = b << 1;
-            i++;
             System.out.println(Integer.toBinaryString(b << 1));
         }
     }

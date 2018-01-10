@@ -1,9 +1,10 @@
 package lesson6;
 
 public class Phone1 {
-    long number;
-    String module;
-    double weight;
+    private long number;
+    private String module;
+    private double weight;
+    private static int count;
 
     Phone1(int n, String m, double w) {
         this(n, m);
@@ -13,9 +14,43 @@ public class Phone1 {
     Phone1(int n, String m) {
         number = n;
         module = m;
+        count++;
     }
 
     Phone1() {
+        count++;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setModule(String module) {
+
+        this.module = module;
+    }
+
+    public long getNumber() {
+
+
+        return number;
+    }
+
+    public String getModule() {
+
+        return module;
+    }
+
+    public long getNumber(long n) {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
     }
 
     void info() {
@@ -35,5 +70,14 @@ public class Phone1 {
             System.out.println("Номера телефонов кому будет отправлено сообщение: " + a);
         }
         System.out.println();
+    }
+
+    static int getCount() {
+        return count;
+    }
+
+    protected void finalize() {
+        System.out.println("Конец");
+        count--;
     }
 }
