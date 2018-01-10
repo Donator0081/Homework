@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Calculating {
     public static void main(String[] args) {
-        int s1 = Scanner();
-        int s2 = Scanner();
-        System.out.println(s1 + s2);
+        Scanner sc = new Scanner(System.in);
+            int s1 = goScanner(sc);
+            int s2 = goScanner(sc);
+            System.out.println(s1 + s2);
     }
 
-    public static int Scanner() {
-        Scanner sc = new Scanner(System.in);
+    public static int goScanner(Scanner sc) {
         System.out.println("Введите целое число");
         if (sc.hasNextInt()) {
             return sc.nextInt();

@@ -4,21 +4,22 @@ import java.util.Scanner;
 
 public class GarlandWork {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Включено лампочек - " + random());
         System.out.println("Выберите функцию:");
         System.out.println("1.Мигание лампочек");
         System.out.println("2.Бегущая строка");
         System.out.println("3.Проверка первой позиции");
         System.out.println("4.Проверка включена гирлянда или выключена");
-        switch (Scanner()) {
+        switch (goScan(sc)) {
             case 1:
-                flashing();
+                flashing(sc);
                 break;
             case 2:
-                runString();
+                runString(sc);
                 break;
             case 3:
-                firstPosition();
+                firstPosition(sc);
                 break;
             case 4:
                 state();
@@ -26,34 +27,34 @@ public class GarlandWork {
         }
     }
 
-    public static void flashing() {
+    public static void flashing(Scanner sc) {
         System.out.println("Введите номер лампочки,которая должна мигать:");
-        int i3 = Scanner();
+        int d = goScan(sc);
         System.out.println("Введите количество миганий лампочки");
-        int i2 = Scanner();
-        for (int i1 = 0; i2 > i1; i1++) {
-            i3 = ~i3;
-            System.out.println(Integer.toBinaryString(i3));
+        int c = goScan(sc);
+        for (int b = 0; c > b; b++) {
+            d = ~d;
+            System.out.println(Integer.toBinaryString(d));
         }
     }
 
-    public static void runString() {
+    public static void runString(Scanner sc) {
         System.out.println("Введите номер лампочки,которая должна убежать:");
         int i = 0;
-        int i1 = Scanner();
+        int b = goScan(sc);
         System.out.println("Введите количество шагов для побега");
-        int i2 = Scanner();
-        for (int i3 = 0; i2 > i3; i3++) {
-            i1 = i1 << 1;
+        int c = goScan(sc);
+        for (int d = 0; c > d; d++) {
+            b = b << 1;
             i++;
-            System.out.println(Integer.toBinaryString(i1 << 1));
+            System.out.println(Integer.toBinaryString(b << 1));
         }
     }
 
-    public static void firstPosition() {
+    public static void firstPosition(Scanner sc) {
         System.out.println("Введите номер лампочки для проверки первой позиции:");
         int b;
-        int i = Scanner();
+        int i = goScan(sc);
         int maska = 1;
         b = i & maska;
         System.out.println("Первая позиция " + b);
@@ -61,7 +62,7 @@ public class GarlandWork {
 
     public static void state() {
         int i = random();
-        if (i > 0 && i < 33) {
+        if (i > 0) {
             System.out.println("Гирлянда включена");
         } else {
             System.out.println("Гирлянда выключена");
@@ -72,8 +73,7 @@ public class GarlandWork {
         return (int) (Math.random() * 33);
     }
 
-    public static int Scanner() {
-        Scanner sc = new Scanner(System.in);
+    public static int goScan(Scanner sc) {
         int i = 0;
         if (sc.hasNextInt()) {
             i = sc.nextInt();

@@ -5,6 +5,7 @@ public class OddNumber {
         String str = args[0];
         int i = Integer.parseInt(str);
         if (i % 2 != 1) {
+            System.out.println(i + " - число четное");
         } else {
             System.out.println(i + " - число нечетное");
         }

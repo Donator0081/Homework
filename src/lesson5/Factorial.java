@@ -6,8 +6,8 @@ public class Factorial {
         int n = random();
         for (int i = 1; i <= n; i++) {
             d = d * i;
-            System.out.println("Факториал случайного числа n = " + d);
         }
+        System.out.println("Факториал случайного числа n = " + d);
     }
 
     public static int random() {
