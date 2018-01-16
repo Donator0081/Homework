@@ -17,7 +17,7 @@ public class MassiveChanges {
                 }
                 System.out.println(Arrays.toString(numbers));
             }
-            if (!b1) {
+            if (b1) {
                 break;
             }
         }

@@ -6,18 +6,18 @@ public class Phone1 {
     private double weight;
     private static int count;
 
-    Phone1(int n, String m, double w) {
+    public Phone1(int n, String m, double w) {
         this(n, m);
         weight = w;
     }
 
-    Phone1(int n, String m) {
+    public Phone1(int n, String m) {
         number = n;
         module = m;
         count++;
     }
 
-    Phone1() {
+    public Phone1() {
         count++;
     }
 
@@ -53,26 +53,26 @@ public class Phone1 {
         this.number = number;
     }
 
-    void info() {
+    public void info() {
         System.out.println("Модель: " + number + " Номер: " + module + " Вес: " + weight);
     }
 
-    void receiveCall(String name) {
+    public void receiveCall(String name) {
         System.out.println("Имя звонящего - " + name);
     }
 
-    void receiveCall(String name, int number) {
+    public void receiveCall(String name, int number) {
         System.out.println("Имя звонящего - " + name + '\n' + "Номер телефона: " + number);
     }
 
-    void sendMassage(String... array) {
+    public void sendMassage(String... array) {
         for (String a : array) {
             System.out.println("Номера телефонов кому будет отправлено сообщение: " + a);
         }
         System.out.println();
     }
 
-    static int getCount() {
+    public static int getCount() {
         return count;
     }
 

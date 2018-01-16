@@ -4,8 +4,8 @@ package lesson7;
  * Created by student on 1/10/2018.
  */
 public class Student {
-    private String firstName,lastName,group;
-    double averageMark;
+    private String firstName, lastName, group;
+    private double averageMark;
 
     public Student(String firstName, String lastName, String group, double averageMark) {
         this.firstName = firstName;
@@ -45,8 +45,9 @@ public class Student {
     public void setAverageMark(double averageMark) {
         this.averageMark = averageMark;
     }
-    public double getScholarship(){
-        if (averageMark==5){
+
+    public double getScholarship() {
+        if (averageMark == 5) {
             return 100;
         }
         return 80;

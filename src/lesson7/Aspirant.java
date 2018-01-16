@@ -20,7 +20,7 @@ public class Aspirant extends Student {
     }
 
     public double getScholarship(){
-        if (averageMark==5){
+        if (getAverageMark()==5){
             return 200;
         }
         return 180;
@@ -41,7 +41,6 @@ public class Aspirant extends Student {
         System.out.println(aspirant2.getLastName());
         System.out.println(aspirant2.getGroup());
         System.out.println(aspirant2.getAverageMark());
-        //System.out.println(aspirant2.getScienceWork());
             for (Student student1 : students){
                 System.out.println(student1.getScholarship());
             }
