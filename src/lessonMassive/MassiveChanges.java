@@ -6,8 +6,8 @@ public class MassiveChanges {
     public static void main(String[] args) {
         int[] numbers = {3, 2, 5, 0, 4};
         int i, j, tmp;
-        boolean b1 = true;
         for (i = 0; i < numbers.length; i++) {
+            boolean b1 = true;
             for (j = 0; j < numbers.length - 1 - i; j++) {
                 if (numbers[j + 1] > numbers[j]) {
                     tmp = numbers[j + 1];

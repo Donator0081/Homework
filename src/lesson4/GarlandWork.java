@@ -29,23 +29,23 @@ public class GarlandWork {
 
     public static void flashing(Scanner sc) {
         System.out.println("Введите номер лампочки,которая должна мигать:");
-        int i = goScan(sc);
+        int garland = goScan(sc);
         System.out.println("Введите количество миганий лампочки");
         int amount = goScan(sc);
-        for (int garland = 0; amount > garland; garland++) {
-            i = ~i;
-            System.out.println(Integer.toBinaryString(i));
+        for (int i = 0; amount > i; i++) {
+            garland = ~garland;
+            System.out.println(Integer.toBinaryString(garland));
         }
     }
 
     public static void runString(Scanner sc) {
         System.out.println("Введите номер лампочки,которая должна убежать:");
-        int i = goScan(sc);
+        int garland = goScan(sc);
         System.out.println("Введите количество шагов для побега");
         int amount = goScan(sc);
-        for (int garland = 0; amount > garland; garland++) {
-            i = i << 1;
-            System.out.println(Integer.toBinaryString(i << 1));
+        for (int i = 0; amount > i; i++) {
+            garland = garland << 1;
+            System.out.println(Integer.toBinaryString(garland << 1));
         }
     }
 
