@@ -1,8 +1,8 @@
 package lesson6;
 
 public class Person {
-    private String fullName;
-    private int age;
+    private String fullName = "Big Bob";
+    private int age = 21;
 
     public Person(String fullName, int age) {
         this.fullName = fullName;

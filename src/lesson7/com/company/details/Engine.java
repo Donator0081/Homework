@@ -1,12 +1,15 @@
 package lesson7.com.company.details;
 
 public class Engine {
-    private int power;
-    private String company;
+    private int power = 200;
+    private String company = "Samsung";
 
     public Engine(int power, String company) {
         this.power = power;
         this.company = company;
+    }
+
+    public Engine() {
     }
 
     public int getPower() {

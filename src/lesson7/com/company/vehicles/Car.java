@@ -67,6 +67,31 @@ public class Car {
                 '}';
     }
 
+    public static void main(String[] args) {
+        Engine engine1 = new Engine();
+        Driver driver1 = new Driver();
+        Car car = new Car("Mazda", "Sedan", 5.2, driver1, engine1);
+        Lorry lorry = new Lorry("Mazda", "Sedan", 5.2, driver1, engine1, 240);
+        SportCar sportCar = new SportCar("Mazda", "Sedan", 5.2, driver1, engine1, 560);
+        car.start();
+        car.stop();
+        car.turnLeft();
+        car.turnRight();
+        car.printInfo();
+        lorry.start();
+        lorry.stop();
+        lorry.turnLeft();
+        lorry.turnRight();
+        lorry.printInfo();
+        System.out.println("Грузоподьемность - " + lorry);
+        sportCar.start();
+        sportCar.stop();
+        sportCar.turnLeft();
+        sportCar.turnRight();
+        sportCar.printInfo();
+        System.out.println("Скорость - " + sportCar);
+    }
+
     public void start() {
         System.out.println("Поехали");
     }
