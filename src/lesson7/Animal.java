@@ -1,8 +1,9 @@
 package lesson7;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Serializable {
     private String food;
     private String location;
 
@@ -10,6 +11,9 @@ public class Animal {
         this.food = food;
         this.location = location;
     }
+
+
+    public Animal(){}
 
     public String getFood() {
         return food;
