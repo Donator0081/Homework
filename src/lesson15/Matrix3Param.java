@@ -1,10 +1,7 @@
 package lesson15;
 
-import lesson12.RegexDemo;
-import lesson6.Matrix;
-import lesson7.Animal;
+import lesson8.Animals.Animal;
 
-import javax.swing.*;
 import java.io.Serializable;
 
 /**

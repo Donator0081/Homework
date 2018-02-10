@@ -1,7 +1,6 @@
 package lesson15;
 
-import lesson7.Animal;
-import org.omg.CORBA.Object;
+import lesson8.Animals.Animal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
