@@ -17,6 +17,6 @@ public class Driver extends Person {
     public String toString() {
         return "Driver{" +
                 "experience=" + experience +
-                "} " + super.toString();
+                '}';
     }
 }
