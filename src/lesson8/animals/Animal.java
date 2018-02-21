@@ -3,7 +3,7 @@ package lesson8.animals;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Animal implements Serializable {
+public class Animal implements Serializable, Comparable<Animal> {
     private String food;
     private String location;
 
@@ -13,7 +13,8 @@ public class Animal implements Serializable {
     }
 
 
-    public Animal(){}
+    public Animal() {
+    }
 
     public String getFood() {
         return food;
@@ -64,5 +65,10 @@ public class Animal implements Serializable {
 
     public void sleep() {
         System.out.println("Спит");
+    }
+
+    @Override
+    public int compareTo(Animal o) {
+        return food.compareTo(o.food);
     }
 }
