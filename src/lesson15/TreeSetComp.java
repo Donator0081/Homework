@@ -1,6 +1,6 @@
 package lesson15;
 
-import lesson8.Animals.Animal;
+import lesson8.animals.Animal;
 
 import java.util.Set;;
 import java.util.TreeSet;
