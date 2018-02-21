@@ -1,6 +1,6 @@
 package lesson14;
 
-import lesson10.PrintableBook.Printable;
+import lesson10.printableBook.Printable;
 
 /**
  * Created by student on 2/4/2018.

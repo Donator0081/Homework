@@ -1,6 +1,6 @@
 package lesson8.com.company.professions;
 
-import lesson7.Person.Person;
+import lesson7.personDem.Person;
 
 public class Driver extends Person {
     private double experience = 3.5;
