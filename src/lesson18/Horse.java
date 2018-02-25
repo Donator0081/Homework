@@ -1,10 +1,16 @@
-package lesson8.animals;
+package lesson18;
+
+import lesson8.animals.Animal;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Horse extends Animal implements Serializable {
     private double height;
+    private Halter halter;
+
+    public Horse() {
+    }
 
     public Horse(String food, String location, double height) {
         super(food, location);
