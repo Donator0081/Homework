@@ -10,7 +10,7 @@ public class Words {
     }
 
     public static void printLatinWords(String str) {
-        String regex = "[a-zA-Z]+\\W";
+        String regex = "[a-zA-Z]";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
 

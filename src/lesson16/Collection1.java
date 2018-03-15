@@ -19,13 +19,13 @@ public class Collection1 {
         arrayList.add(animal);
 
         System.out.println("Размер коллекции : " + arrayList.size());
-        CollectionList(arrayList);
+        collectionList(arrayList);
 
         Animal animal1 = arrayList.get(1);
         animal1.setFood("String5");
         arrayList.set(1, animal1);
 
-        CollectionList(arrayList);
+        collectionList(arrayList);
 
         arrayList.remove(arrayList.size() - 1);
         System.out.println("Размер коллекции : " + arrayList.size());
@@ -33,32 +33,32 @@ public class Collection1 {
         arrayList.clear();
         System.out.println("Размер коллекции : " + arrayList.size());
 
-        ArrayVariant1(arrayList);
+        arrayVariant1(arrayList);
 
-        ArrayVariant2(arrayList);
+        arrayVariant2(arrayList);
 
-        ArrayVariant3(arrayList);
+        arrayVariant3(arrayList);
     }
 
-    private static void ArrayVariant3(List<Animal> arrayList) {
+    private static void arrayVariant3(List<Animal> arrayList) {
         Animal[] animals2 = arrayList.toArray(new Animal[0]);
         System.out.println(Arrays.toString(animals2));
     }
 
-    private static void ArrayVariant2(List<Animal> arrayList) {
+    private static void arrayVariant2(List<Animal> arrayList) {
         Animal[] animals = new Animal[arrayList.size()];
         arrayList.toArray(animals);
         System.out.println(Arrays.toString(animals));
     }
 
-    private static void ArrayVariant1(List<Animal> arrayList) {
-        java.lang.Object [] objects = arrayList.toArray();
+    private static void arrayVariant1(List<Animal> arrayList) {
+        java.lang.Object[] objects = arrayList.toArray();
         for (java.lang.Object object : objects) {
             System.out.println(object);
         }
     }
 
-    private static void CollectionList(List<Animal> arrayList) {
+    private static void collectionList(List<Animal> arrayList) {
         for (Animal anim : arrayList) {
             System.out.println("Элемент: " + anim);
 

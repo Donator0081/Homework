@@ -2,7 +2,6 @@ package lesson13;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
@@ -12,7 +11,7 @@ import java.util.Locale;
 public class CalendarDemo {
     public static void main(String[] args) {
         Calendar calendar = new GregorianCalendar(1995, 10, 24);
-        System.out.println(calendar.getTime());
+        System.out.println("Прожитые милисекунды - " + calendar.getTime());
         System.out.println("Месяц " + calendar.get(Calendar.MONTH));
         System.out.println("Год " + calendar.get(Calendar.YEAR));
         System.out.println("Неделя в месяце "
@@ -22,8 +21,6 @@ public class CalendarDemo {
         System.out.println("День в году " + calendar.get(Calendar.DAY_OF_YEAR));
         System.out.println("День в месяце "
                 + calendar.get(Calendar.DAY_OF_MONTH));
-        Date date = new Date(1995, 11, 24);
-        System.out.println("Прожитые милисекунды - " + date.getTime());
         DateFormat dfa1 = DateFormat.getDateInstance(DateFormat.SHORT, Locale.ENGLISH);
         DateFormat dfa2 = DateFormat.getDateInstance(DateFormat.FULL, Locale.ENGLISH);
         DateFormat dfa3 = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.ENGLISH);
