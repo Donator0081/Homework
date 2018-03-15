@@ -1,19 +1,19 @@
 package lesson12;
 
-import java.util.Formatter;
 
-public class Report extends Employee {
+public class Report {
     public static void main(String[] args) {
-        Employee[] emp = new Employee[2];
-        emp[0] = new Employee("Иван Петрович", 150.444444);
-        emp[1] = new Employee("Хел бой", 244.1555555);
-        generateReport(emp);
-        System.out.println();
+        Employee builder = new Employee("Budy Dudo", 5000.50);
+        Employee policeman = new Employee("Tim Burt", 4300.70);
+        Employee[] employees = {builder, policeman};
+
+        generateReport(employees);
     }
 
-
-    public static void generateReport(Employee[] emp) {
-        Formatter f = new Formatter();
-        System.out.println("%.2f" + f);
+    public static void generateReport(Employee[] employees) {
+        for (Employee employee : employees) {
+            System.out.printf("%S получает %2$.2f и премию %2$.2f%n",
+                    employee.getFullName(), employee.getSalary());
+        }
     }
 }
