@@ -12,6 +12,8 @@ public class Flower {
         this.state = state;
         this.time = time;
         this.price = price;
+        count++;
+        count += price;
     }
 
 

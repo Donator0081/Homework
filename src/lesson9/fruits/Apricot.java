@@ -1,47 +1,55 @@
 package lesson9.fruits;
 
-import java.util.Objects;
-
 public class Apricot extends Fruit {
-    private String color;
+    private static int cstOfAllAprcts = 0;
+    private static int apricotCntr = 0;
+    private String variety;
+    private int apricotCost;
 
-    public Apricot(double weight, double price, String color) {
-        super(weight, price);
-        this.color = color;
+    public Apricot(int weight, String variety, int apricotCost) {
+        super(weight, apricotCost);
+        this.variety = variety;
+        this.apricotCost = apricotCost;
+        apricotCntr++;
+        cstOfAllAprcts += apricotCost;
     }
 
-    public String getColor() {
-        return color;
+    public static int getApricotCntr() {
+        return apricotCntr;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public static int getCstOfAllAprcts() {
+        return cstOfAllAprcts;
+    }
+
+    public String getVariety() {
+        return variety;
+    }
+
+    public void setVariety(String variety) {
+        this.variety = variety;
+    }
+
+    public int getApricotCost() {
+        return apricotCost;
+    }
+
+    public void setApricotCost(int apricotCost) {
+        this.apricotCost = apricotCost;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Apricot apricot = (Apricot) o;
-        return Objects.equals(color, apricot.color);
+    public int getCostOfFrts() {
+        return cstOfAllAprcts;
     }
 
     @Override
-    public int hashCode() {
-
-        return Objects.hash(super.hashCode(), color);
+    public String getFrstName() {
+        return "абрикос";
     }
 
     @Override
-    public String toString() {
-        return "Apricot{" +
-                "color='" + color + '\'' +
-                "} " + super.toString();
-    }
+    public void cost() {
 
-    @Override
-    public void fruitsPrice() {
-        System.out.println("Абрикос весом " + getWeight() + " грамм" + " стоит: " + getPrice() + " грн");
     }
 }

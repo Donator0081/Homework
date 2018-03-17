@@ -1,4 +1,6 @@
-package lesson7.Person;
+package lesson7.person;
+
+import java.util.Objects;
 
 /**
  * Created by student on 2/11/2018.
@@ -10,6 +12,9 @@ public class Person {
     public Person(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
+    }
+
+    public Person() {
     }
 
     public String getFullName() {
@@ -28,7 +33,25 @@ public class Person {
         this.age = age;
     }
 
-    public Person() {
+    @Override
+    public String toString() {
+        return String.format("person{" +
+                "fullName='%s', age=%d}", fullName, age);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                Objects.equals(fullName, person.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(fullName, age);
     }
 
     public void move() {
@@ -37,11 +60,5 @@ public class Person {
 
     public void talk() {
         System.out.println(fullName + " " + age + " лет - говорит");
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Person{" +
-                "fullName='%s', age=%d}", fullName, age);
     }
 }

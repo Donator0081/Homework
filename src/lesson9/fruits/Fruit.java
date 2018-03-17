@@ -4,17 +4,14 @@ import java.util.Objects;
 
 public abstract class Fruit {
     private double weight;
-    private double price;
+    private static int costOfAllFrts = 0;
+    private static int cntr = 0;
 
-    public void printManufacturerInfo () {
-        System.out.println("Made in Ukraine");
-    }
 
-    public abstract void fruitsPrice();
-
-    public Fruit(double weight, double price) {
+    public Fruit(double weight,int costOfAllFrts) {
         this.weight = weight;
-        this.price = price;
+        Fruit.costOfAllFrts += costOfAllFrts;
+        cntr++;
     }
 
     public double getWeight() {
@@ -25,12 +22,12 @@ public abstract class Fruit {
         this.weight = weight;
     }
 
-    public double getPrice() {
-        return price;
+    public static int getCostOfAllFrts() {
+        return costOfAllFrts;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public static int getCntr() {
+        return cntr;
     }
 
     @Override
@@ -38,21 +35,30 @@ public abstract class Fruit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruit fruit = (Fruit) o;
-        return Double.compare(fruit.weight, weight) == 0 &&
-                Double.compare(fruit.price, price) == 0;
+        return Double.compare(fruit.weight, weight) == 0;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(weight, price);
+        return Objects.hash(weight);
     }
 
     @Override
     public String toString() {
         return "Fruit{" +
                 "weight=" + weight +
-                ", price=" + price +
+                ", price=" +
                 '}';
     }
+
+    public final void printManufacturerInfo() {
+        System.out.println("Made in Ukraine");
+    }
+
+    public abstract void cost();
+
+    public abstract String getFrstName();
+
+    public abstract int getCostOfFrts();
 }

@@ -1,49 +1,77 @@
 package lesson9.fruits;
 
-import java.util.Objects;
-
 public class Pear extends Fruit {
-    private String color;
+    private static int cstOfAllPrs = 0;
+    private static int pearCntr = 0;
+    private String pearColor;
+    private String variety;
+    private int pearCost;
 
-    public Pear(double weight, double price, String color) {
-        super(weight, price);
-        this.color = color;
+    public Pear(int weight, String pearColor, String variety, int pearCost) {
+        super(weight, pearCost);
+        this.pearColor = pearColor;
+        this.variety = variety;
+        this.pearCost = pearCost;
+        pearCntr++;
+        cstOfAllPrs += pearCost;
     }
 
-    public String getColor() {
-        return color;
+    public static int getCstOfAllPrs() {
+        return cstOfAllPrs;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public static void setCstOfAllPrs(int cstOfAllPrs) {
+        Pear.cstOfAllPrs = cstOfAllPrs;
+    }
+
+    public static int getPearCntr() {
+        return pearCntr;
+    }
+
+    public static void setPearCntr(int pearCntr) {
+        Pear.pearCntr = pearCntr;
+    }
+
+    public String getPearColor() {
+        return pearColor;
+    }
+
+    public void setPearColor(String pearColor) {
+        this.pearColor = pearColor;
+    }
+
+    public void setPearolor(String pearColor) {
+        this.pearColor = pearColor;
+    }
+
+    public String getVariety() {
+        return variety;
+    }
+
+    public void setVariety(String variety) {
+        this.variety = variety;
+    }
+
+    public int getPearCost() {
+        return pearCost;
+    }
+
+    public void setPearCost(int pearCost) {
+        this.pearCost = pearCost;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Pear pear = (Pear) o;
-        return Objects.equals(color, pear.color);
+    public void cost() {
+
     }
 
     @Override
-    public int hashCode() {
-
-        return Objects.hash(super.hashCode(), color);
-    }
-
-
-    @Override
-    public String toString() {
-        return "Pear{" +
-                "color='" + color + '\'' +
-                "} " + super.toString();
+    public String getFrstName() {
+        return "груш";
     }
 
     @Override
-    public void fruitsPrice() {
-        System.out.println("Груша весом " + getWeight() + " грамм" + " стоит: " + getPrice() + " грн");
+    public int getCostOfFrts() {
+        return cstOfAllPrs;
     }
-
 }

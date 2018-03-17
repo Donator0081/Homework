@@ -1,4 +1,4 @@
-package lesson7.Person;
+package lesson7.person;
 
 /**
  * Created by student on 2/11/2018.

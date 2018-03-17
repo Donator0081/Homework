@@ -1,48 +1,61 @@
 package lesson9.fruits;
 
-import java.util.Objects;
-
 public class Apple extends Fruit {
-    private String color;
+    private static int cstOfAllApps = 0;
+    private static int appleCntr = 0;
+    private String appleColor;
+    private String variety;
+    private int appleCost;
 
-    public Apple(double weight, double price, String color) {
-        super(weight, price);
-        this.color = color;
+    public Apple(int weight, String appleColor, String variety, int appleCost) {
+        super(weight, appleCost);
+        this.appleColor = appleColor;
+        this.variety = variety;
+        this.appleCost = appleCost;
+        appleCntr++;
+        cstOfAllApps += appleCost;
     }
 
-    public String getColor() {
-        return color;
+    public static int getAppleCntr() {
+        return appleCntr;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getAppleColor() {
+        return appleColor;
+    }
+
+    public void setAppleColor(String appleColor) {
+        this.appleColor = appleColor;
+    }
+
+    public String getVariety() {
+        return variety;
+    }
+
+    public void setVariety(String variety) {
+        this.variety = variety;
+    }
+
+    public int getAppleCost() {
+        return appleCost;
+    }
+
+    public void setAppleCost(int appleCost) {
+        this.appleCost = appleCost;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Apple apple = (Apple) o;
-        return Objects.equals(color, apple.color);
+    public int getCostOfFrts() {
+        return cstOfAllApps;
     }
 
     @Override
-    public int hashCode() {
-
-        return Objects.hash(super.hashCode(), color);
+    public String getFrstName() {
+        return "яблок";
     }
 
     @Override
-    public String toString() {
-        return "Apple{" +
-                "color='" + color + '\'' +
-                "} " + super.toString();
-    }
+    public void cost() {
 
-    @Override
-    public void fruitsPrice() {
-        System.out.println("Яблоко весом " + getWeight() + " грамм" + " стоит: " + getPrice() + " грн");
     }
-
 }
